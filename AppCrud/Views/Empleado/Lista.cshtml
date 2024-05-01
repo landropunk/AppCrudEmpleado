@@ -1,9 +1,9 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    Esta vista muestra una lista de empleados.
+    Se utiliza el modelo de List<Empleado> para mostrar los datos de los empleados en una tabla.
+    Cada fila de la tabla representa un empleado y tiene un botón para editar y eliminar el empleado.
+    También hay un botón para crear un nuevo empleado.
 *@
-@{
-}
-
 @model List<AppCrud.Models.Empleado>
 
 <div class="row">
@@ -41,11 +41,11 @@
     </div>
 </div>
 
-                        @section Scripts {
-                            <script>
-                                function confirmar() {
-                                    return confirm("¿Está seguro de eliminar el empleado?");
-                                }
-                            </script>
-                            
-                        }
+@section Scripts {
+    <script>
+        // Esta función muestra un mensaje de confirmación antes de eliminar un empleado.
+        function confirmar() {
+            return confirm("¿Está seguro de eliminar el empleado?");
+        }
+    </script>
+}
